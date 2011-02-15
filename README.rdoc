@@ -1,6 +1,10 @@
 = Nested Form for SimpleForm https://github.com/plataformatec/simple_form
 
-This modification of nested_form used simple_form builder. f.input is available in nested_form_for forms
+This modification of nested_form used simple_form builder. 
+
+  f.input 
+
+is available in nested_form_for forms
 
 == Install
 
