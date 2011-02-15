@@ -1,5 +1,5 @@
 module NestedForm
-  class Builder < ActionView::Helpers::FormBuilder
+  module Builder
     def link_to_add(name, association)
       @fields ||= {}
       @template.after_nested_form(association) do
