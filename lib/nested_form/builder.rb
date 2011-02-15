@@ -32,3 +32,7 @@ module NestedForm
     end
   end
 end
+
+class SimpleForm::FormBuilder
+  include NestedForm::Builder
+end
