@@ -1,7 +1,7 @@
 module NestedForm
   module ViewHelper
     def nested_form_for(*args, &block)
-      options = args.extract_options!.reverse_merge(:builder => NestedForm::Builder)
+      options = args.extract_options!
       output = simple_form_for(*(args << options), &block)
       @after_nested_form_callbacks ||= []
       fields = @after_nested_form_callbacks.map do |callback|

@@ -15,15 +15,13 @@ module NestedForm
     def link_to_remove(name)
       hidden_field(:_destroy) + @template.link_to(name, "javascript:void(0)", :class => "remove_nested_fields")
     end
-    
-    
+
     def fields_for_with_nested_attributes(association, args, block)
       @fields ||= {}
       @fields[association] = block
       super
     end
 
-    
     def fields_for_nested_model(name, association, args, block)
       output = '<div class="fields">'.html_safe
       output << super
