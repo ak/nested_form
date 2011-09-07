@@ -15,8 +15,7 @@ module NestedForm
     def link_to_remove(*args)
       name         = args[0]
       options      = args[1] || {}
-      html_options = args[2] || {}
-      hidden_field(:_destroy) + @template.link_to(name, "javascript:void(0)", options, html_options.merge({:class => "remove_nested_fields"}))
+      hidden_field(:_destroy) + @template.link_to(name, "javascript:void(0)", options.merge({:class => "remove_nested_fields"}))
     end
 
     def fields_for_with_nested_attributes(association, args, block)
